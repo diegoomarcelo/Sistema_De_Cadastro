@@ -28,5 +28,7 @@ O sistema permite a gestão dos alunos através das seguintes operações:
    ```bash
    git clone https://github.com/diegoomarcelo/Sistema_De_Cadastro.git
 2. Conecte ao banco de dados MySQL com o DAO.
-3. Execute a através da sua IDE de preferência.
+3. Execute através da sua IDE de preferência.
+
+Diego Marcelo.
    
