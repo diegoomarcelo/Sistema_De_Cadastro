@@ -60,7 +60,7 @@ Uma aplicação desktop com telas Swing para cada operação, que conversa com o
 ```mermaid
 flowchart LR
     V[Visão<br/>Swing: Principal, FormAluno,<br/>FormPesquisar, FormAlterar,<br/>FormDeletarAluno] --> C[Controle<br/>Aluno]
-    V --> M[Modelo<br/>CadastroAlunoDAO]
+    V --> M[Entidade/DAO<br/>CadastroAlunoDAO]
     M --> D[DAO<br/>conexão JDBC]
     D --> DB[(MySQL<br/>crudjava.alunos)]
 ```
@@ -71,7 +71,7 @@ flowchart LR
 src/br/com/
 ├── visao/     # telas Swing (cadastro, pesquisa, alteração, exclusão)
 ├── controle/  # Aluno: matrícula, nome, idade, e-mail
-└── model/     # DAO (conexão) e CadastroAlunoDAO (inserir, pesquisar, editar, deletar)
+└── entidade/  # DAO (conexão) e CadastroAlunoDAO (inserir, pesquisar, editar, deletar)
 ```
 
 ## 💡 Decisões técnicas
@@ -98,14 +98,13 @@ src/br/com/
    );
    ```
 
-2. Ajuste usuário e senha do MySQL em `src/br/com/model/DAO.java`.
+2. Ajuste usuário e senha do MySQL em `src/br/com/entidade/DAO.java` (padrão: `root`, sem senha).
 3. Abra o projeto no NetBeans. O driver `mysql-connector-j-8.0.33.jar` já está na raiz do repositório; adicione-o às bibliotecas se a IDE não reconhecer.
 4. Execute a classe `br.com.visao.Principal`.
 
 ## 🗺️ Próximos passos
 
 - [ ] Ler credenciais do banco de um arquivo de configuração em vez do código.
-- [ ] Remover a pasta `build/` e o pacote duplicado `entidade/` do repositório.
 - [ ] Migrar para Maven e adicionar testes do DAO com JUnit.
 
 ## 👤 Autor
