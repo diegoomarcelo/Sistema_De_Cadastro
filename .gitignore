@@ -1,0 +1,11 @@
+# Saída de compilação (o NetBeans recria em Clean and Build)
+build/
+*.class
+
+# Configurações locais do NetBeans
+nbproject/private/
+
+# IDE / sistema
+.idea/
+.vscode/
+.DS_Store
